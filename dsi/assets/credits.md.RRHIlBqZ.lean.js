@@ -1,0 +1,1 @@
+import{_ as r,o as t,c as a,ae as o}from"./chunks/framework.DweSwlXA.js";const u=JSON.parse('{"title":"Credits","description":"","frontmatter":{},"headers":[],"relativePath":"credits.md","filePath":"credits.md"}'),i={name:"credits.md"};function n(l,e,h,s,p,d){return t(),a("div",null,[...e[0]||(e[0]=[o("",6)])])}const c=r(i,[["render",n]]);export{u as __pageData,c as default};
