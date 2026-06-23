@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o,ae as r}from"./chunks/framework.BNm46-bE.js";const u=JSON.parse('{"title":"FAQ","description":"","frontmatter":{"sidebar":false},"headers":[],"relativePath":"faq.md","filePath":"faq.md"}'),i={name:"faq.md"};function s(n,a,h,l,d,c){return t(),o("div",null,[...a[0]||(a[0]=[r("",15)])])}const p=e(i,[["render",s]]);export{u as __pageData,p as default};
