@@ -1,0 +1,5 @@
+# Global owners for all guide files
+*       @your-github-username
+
+# Specific people can be assigned to specific console folders if needed
+/switch/ @your-switch-expert-friend
