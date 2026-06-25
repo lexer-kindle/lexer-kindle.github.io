@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Credits &amp; sources — PlayStation 1 Hacks Guide</title>
-<meta name="description" content="PlayStation 1 Hacks Guide — Credits &amp; sources.">
+<title>Regional overview — PlayStation 1 Hacks Guide</title>
+<meta name="description" content="PlayStation 1 Hacks Guide — Regional overview.">
 <link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
@@ -68,7 +68,7 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="motherboard-map.html">Motherboard map</a>
 <a href="controllers.html">Controllers</a>
 <a href="memory-cards.html">Memory cards</a>
-<a href="regional-overview.html">Regional overview</a>
+<a href="regional-overview.html" class="active">Regional overview</a>
 <a href="serial-and-datecode.html">Serials &amp; date codes</a>
 <p class="sec">Methods</p>
 <a href="methods-overview.html">Methods overview</a>
@@ -144,25 +144,30 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="faq.html">FAQ</a>
 <a href="tools-list.html">Tools &amp; software</a>
 <a href="compatibility-notes.html">Compatibility notes</a>
-<a href="credits.html" class="active">Credits &amp; sources</a></aside>
-<main class="content"><span class="badge">PlayStation 1</span><h1>Credits &amp; sources</h1>
-<h2>Credits and Sources</h2>
-<p>This PlayStation reference section was written as original content for Hacks.Guide. The explanations, matrices, and answers here were composed in our own words to be accurate and accessible, rather than copied from any single source.</p>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>Regional overview</h1>
+<h2>Regional Overview</h2>
+<p>Like most consoles of its era, the PlayStation was sold in region-specific variants. The region affects which discs a console will boot, the video standard it outputs, and in one case the way protection is enforced in the system firmware. Knowing your region is essential before sourcing games or planning import play.</p>
 
-<h3>Inspired by the community</h3>
-<p>Modding the original PlayStation is possible because of decades of collective documentation, reverse engineering, and tutorial writing by hobbyists. Our understanding draws on the broad body of community knowledge that has accumulated around modchips, optical drive emulators, and homebrew development. Where we describe a tool such as PSNee, xStation, the Terraonion MODE, or PSn00bSDK, the credit for that work belongs entirely to its original authors and maintainers.</p>
+<h3>The Three Region Families</h3>
+<ul>
+<li><strong>NTSC-U</strong> — the North American family, outputting the NTSC video standard.</li>
+<li><strong>NTSC-J</strong> — the Japanese family, also NTSC, and home to the earliest units like the SCPH-1000.</li>
+<li><strong>PAL</strong> — the European and broader PAL-territory family, outputting the PAL video standard.</li>
+</ul>
 
-<h3>Attribution</h3>
-<p>General reference material was informed by widely available community documentation, including resources maintained by ConsoleMods and other long-standing wikis, forums, and project pages. We are grateful to the maintainers and contributors of those projects for keeping accurate information freely available. Full source attribution is recorded in the accompanying Credits.txt file that ships with this section.</p>
+<h3>Video and Compatibility</h3>
+<p>NTSC and PAL differ in resolution and refresh rate, so a game built for one standard may display incorrectly on a console expecting the other, even setting aside region locking. This is why imported discs sometimes produce rolling or mismatched pictures.</p>
 
 <div class="callout">
-<h2>A note on accuracy</h2>
-<p>Hardware revisions, firmware, and tool compatibility change over time. If you spot an error or an out-of-date detail, please report it so the reference can be corrected. Community feedback is how guides like this stay reliable.</p>
+<h2>The PAL BIOS Difference</h2>
+<p>PAL consoles carry an <strong>additional layer of region protection in the BIOS</strong> beyond what the NTSC families use. This extra check makes PAL units behave differently when presented with out-of-region discs, and it is something to account for when comparing methods written for NTSC machines.</p>
 </div>
 
-<h3>Using this content</h3>
-<p>This material is provided to help enthusiasts preserve and enjoy hardware they own. Always respect copyright law: modding is for backups of software you legally possess and for running original homebrew, not for piracy.</p>
-<div class="pager"><a href="compatibility-notes.html">&larr; Compatibility notes</a><span></span></div>
+<div class="warn">
+<p>Because of these differences, guidance and behaviour can vary between regions. Always confirm whether material you are following assumes an NTSC or PAL console.</p>
+</div>
+<div class="pager"><a href="memory-cards.html">&larr; Memory cards</a><a href="serial-and-datecode.html">Serials &amp; date codes &rarr;</a></div>
 </main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
 </body></html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Credits &amp; sources — PlayStation 1 Hacks Guide</title>
-<meta name="description" content="PlayStation 1 Hacks Guide — Credits &amp; sources.">
+<title>Recapping — PlayStation 1 Hacks Guide</title>
+<meta name="description" content="PlayStation 1 Hacks Guide — Recapping.">
 <link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
@@ -127,7 +127,7 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="power-supply.html">Power supply</a>
 <a href="psone-lcd-screen.html">PSone LCD screen</a>
 <a href="the-tilt-trick.html">The tilt trick</a>
-<a href="recapping.html">Recapping</a>
+<a href="recapping.html" class="active">Recapping</a>
 <p class="sec">Troubleshooting</p>
 <a href="ts-wont-read-discs.html">Won&#x27;t read discs</a>
 <a href="ts-modchip-no-boot.html">Modchip won&#x27;t boot games</a>
@@ -144,25 +144,25 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="faq.html">FAQ</a>
 <a href="tools-list.html">Tools &amp; software</a>
 <a href="compatibility-notes.html">Compatibility notes</a>
-<a href="credits.html" class="active">Credits &amp; sources</a></aside>
-<main class="content"><span class="badge">PlayStation 1</span><h1>Credits &amp; sources</h1>
-<h2>Credits and Sources</h2>
-<p>This PlayStation reference section was written as original content for Hacks.Guide. The explanations, matrices, and answers here were composed in our own words to be accurate and accessible, rather than copied from any single source.</p>
-
-<h3>Inspired by the community</h3>
-<p>Modding the original PlayStation is possible because of decades of collective documentation, reverse engineering, and tutorial writing by hobbyists. Our understanding draws on the broad body of community knowledge that has accumulated around modchips, optical drive emulators, and homebrew development. Where we describe a tool such as PSNee, xStation, the Terraonion MODE, or PSn00bSDK, the credit for that work belongs entirely to its original authors and maintainers.</p>
-
-<h3>Attribution</h3>
-<p>General reference material was informed by widely available community documentation, including resources maintained by ConsoleMods and other long-standing wikis, forums, and project pages. We are grateful to the maintainers and contributors of those projects for keeping accurate information freely available. Full source attribution is recorded in the accompanying Credits.txt file that ships with this section.</p>
-
-<div class="callout">
-<h2>A note on accuracy</h2>
-<p>Hardware revisions, firmware, and tool compatibility change over time. If you spot an error or an out-of-date detail, please report it so the reference can be corrected. Community feedback is how guides like this stay reliable.</p>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>Recapping</h1>
+<div class="warn">
+<p>Recapping involves soldering on boards that may carry residual charge, especially near the power supply. Discharge and unplug the console first, work with proper ventilation, and never assume an old capacitor is safe to handle until the board is fully de-energized.</p>
 </div>
 
-<h3>Using this content</h3>
-<p>This material is provided to help enthusiasts preserve and enjoy hardware they own. Always respect copyright law: modding is for backups of software you legally possess and for running original homebrew, not for piracy.</p>
-<div class="pager"><a href="compatibility-notes.html">&larr; Compatibility notes</a><span></span></div>
+<h2>Recapping: When It's Worth It</h2>
+<p>Recapping means replacing the electrolytic capacitors on a board with fresh ones. On many retro consoles it is a near-mandatory ritual, but on the original PlayStation the picture is more nuanced. Knowing when recapping actually helps saves you from unnecessary risk and effort.</p>
+
+<ol class="phases">
+<li><div class="t">Inspect before you act</div><div class="d">Open the console and look closely at the capacitors, especially on the power supply. Bulging tops, leaked electrolyte, or crusty residue around the base are clear signs a recap is justified.</div></li>
+<li><div class="t">Weigh the symptoms</div><div class="d">Recapping is most worthwhile when you see power instability, resets, or visible capacitor failure. A console that reads discs perfectly with clean caps rarely needs it.</div></li>
+<li><div class="t">Choose quality parts</div><div class="d">Match capacitance and voltage rating, and use reputable low-ESR parts rated for the temperatures inside the console. Cheap capacitors can fail faster than what you removed.</div></li>
+<li><div class="t">Desolder cleanly</div><div class="d">Remove old caps without lifting pads, clean the holes, and note polarity carefully. Reversed electrolytics can fail dramatically.</div></li>
+<li><div class="t">Test thoroughly</div><div class="d">Power up and run a demanding disc for a while to confirm stability before closing the shell.</div></li>
+</ol>
+
+<p>In short, recap when the evidence calls for it rather than as a reflex. A targeted repair of the power supply caps fixes far more PlayStations than a blanket board-wide recap ever will. <span class="tag">capacitors</span> <span class="tag">power</span></p>
+<div class="pager"><a href="the-tilt-trick.html">&larr; The tilt trick</a><a href="ts-wont-read-discs.html">Won&#x27;t read discs &rarr;</a></div>
 </main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
 </body></html>

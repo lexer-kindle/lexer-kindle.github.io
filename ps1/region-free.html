@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Credits &amp; sources — PlayStation 1 Hacks Guide</title>
-<meta name="description" content="PlayStation 1 Hacks Guide — Credits &amp; sources.">
+<title>Region-free play — PlayStation 1 Hacks Guide</title>
+<meta name="description" content="PlayStation 1 Hacks Guide — Region-free play.">
 <link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
@@ -114,7 +114,7 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="av-troubleshooting.html">AV troubleshooting</a>
 <p class="sec">Region &amp; Import</p>
 <a href="region-overview.html">Region overview</a>
-<a href="region-free.html">Region-free play</a>
+<a href="region-free.html" class="active">Region-free play</a>
 <a href="playing-imports.html">Playing imports</a>
 <a href="ntsc-pal-differences.html">NTSC vs PAL</a>
 <p class="sec">Maintenance &amp; Repair</p>
@@ -144,25 +144,31 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="faq.html">FAQ</a>
 <a href="tools-list.html">Tools &amp; software</a>
 <a href="compatibility-notes.html">Compatibility notes</a>
-<a href="credits.html" class="active">Credits &amp; sources</a></aside>
-<main class="content"><span class="badge">PlayStation 1</span><h1>Credits &amp; sources</h1>
-<h2>Credits and Sources</h2>
-<p>This PlayStation reference section was written as original content for Hacks.Guide. The explanations, matrices, and answers here were composed in our own words to be accurate and accessible, rather than copied from any single source.</p>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>Region-free play</h1>
+<h2>Achieving Region-Free Play</h2>
 
-<h3>Inspired by the community</h3>
-<p>Modding the original PlayStation is possible because of decades of collective documentation, reverse engineering, and tutorial writing by hobbyists. Our understanding draws on the broad body of community knowledge that has accumulated around modchips, optical drive emulators, and homebrew development. Where we describe a tool such as PSNee, xStation, the Terraonion MODE, or PSn00bSDK, the credit for that work belongs entirely to its original authors and maintainers.</p>
+<p>To legally play imports you own, you need to defeat the console's region check. There are two mainstream approaches: an internal <strong>modchip</strong> or an external <strong>optical drive emulator (ODE)</strong>.</p>
 
-<h3>Attribution</h3>
-<p>General reference material was informed by widely available community documentation, including resources maintained by ConsoleMods and other long-standing wikis, forums, and project pages. We are grateful to the maintainers and contributors of those projects for keeping accurate information freely available. Full source attribution is recorded in the accompanying Credits.txt file that ships with this section.</p>
+<h3>Modchips</h3>
+<p>A modchip is a small board soldered inside the console. During boot it injects the region signal the system expects, so the drive controller accepts out-of-region discs as if they were local. On <strong>NTSC consoles</strong> the wiring is relatively simple, since only the disc-region check stands in the way.</p>
 
-<div class="callout">
-<h2>A note on accuracy</h2>
-<p>Hardware revisions, firmware, and tool compatibility change over time. If you spot an error or an out-of-date detail, please report it so the reference can be corrected. Community feedback is how guides like this stay reliable.</p>
+<div class="warn">
+<p>On a <strong>PAL console</strong>, a modchip must also tie into the <strong>BIOS-level region check</strong>. This means additional connections to BIOS pins beyond the basic data point. Skipping these will leave out-of-region games failing to boot even with the chip installed.</p>
 </div>
 
-<h3>Using this content</h3>
-<p>This material is provided to help enthusiasts preserve and enjoy hardware they own. Always respect copyright law: modding is for backups of software you legally possess and for running original homebrew, not for piracy.</p>
-<div class="pager"><a href="compatibility-notes.html">&larr; Compatibility notes</a><span></span></div>
+<h3>Optical drive emulators</h3>
+<p>An ODE replaces the laser drive with a board that loads game images from an SD card or USB storage. Because the emulator feeds the console its own region-correct boot sequence, it sidesteps region locking entirely and avoids the wear of an aging laser.</p>
+
+<table class="methods">
+<tr><th>Method</th><th>Install effort</th><th>Best for</th></tr>
+<tr><td>Modchip (NTSC)</td><td>Low</td><td>Simple import play</td></tr>
+<tr><td>Modchip (PAL)</td><td>Higher</td><td>Imports needing BIOS pins</td></tr>
+<tr><td>ODE</td><td>Moderate</td><td>Region-free, no laser</td></tr>
+</table>
+
+<p>Whichever route you choose, <strong>only use these methods with discs and backups you legally own</strong>.</p>
+<div class="pager"><a href="region-overview.html">&larr; Region overview</a><a href="playing-imports.html">Playing imports &rarr;</a></div>
 </main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
 </body></html>

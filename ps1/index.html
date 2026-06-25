@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en-US" dir="ltr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PlayStation 1 Hacks Guide</title>
 <meta name="description" content="PlayStation 1 Hacks Guide — Overview.">
-<link rel="icon" href="../images/favicon.ico">
-<style>
+<link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
 a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
 header.site{border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;background:var(--bg);z-index:5}
-header.site .bar{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px}
+header.site .bar{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px}
 header.site .brand{font-weight:700;font-size:17px;color:var(--text)}
 header.site nav{margin-left:auto;display:flex;gap:18px;font-size:14px}
 header.site nav a{color:var(--text-soft)}
-.shell{max-width:1080px;margin:0 auto;padding:0 24px}
-.layout{display:flex;gap:34px;align-items:flex-start;padding:26px 0 10px}
-.sidebar{flex:0 0 216px;position:sticky;top:74px;font-size:14px}
-.sidebar .kick{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--text-soft);margin:0 0 8px 10px}
-.sidebar a{display:block;padding:8px 11px;border-radius:8px;color:var(--text-soft);border-left:3px solid transparent}
+.shell{max-width:1140px;margin:0 auto;padding:0 24px}
+.layout{display:flex;gap:34px;align-items:flex-start;padding:24px 0 10px}
+.sidebar{flex:0 0 246px;position:sticky;top:74px;max-height:calc(100vh - 90px);overflow-y:auto;font-size:13.5px;padding-right:6px}
+.sidebar .back{margin-bottom:10px}
+.sidebar .kick{font-size:14px;font-weight:700;color:var(--text);margin:0 0 10px 6px}
+.sidebar .sec{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--text-soft);margin:14px 0 4px 6px;font-weight:700}
+.sidebar a{display:block;padding:5px 9px;border-radius:7px;color:var(--text-soft);border-left:3px solid transparent;line-height:1.35}
 .sidebar a:hover{text-decoration:none;background:var(--bg-soft);color:var(--text)}
 .sidebar a.active{background:var(--ok-bg);border-left-color:var(--accent2);color:var(--text);font-weight:600}
-.sidebar .back{margin-bottom:12px}
-.content{flex:1;min-width:0;padding-bottom:30px}
+.content{flex:1;min-width:0;padding-bottom:20px}
 .content .badge{display:inline-block;padding:5px 13px;border-radius:999px;font-size:12px;font-weight:600;color:#fff;background:linear-gradient(120deg,var(--accent1),var(--accent2));margin-bottom:14px}
-.content h1{font-size:33px;line-height:1.15;margin:0 0 18px}
-.content h2{font-size:21px;margin:30px 0 12px}
-.content h3{font-size:16px;margin:20px 0 4px}
+.content h1{font-size:32px;line-height:1.15;margin:0 0 18px}
+.content h2{font-size:21px;margin:28px 0 12px}
+.content h3{font-size:16px;margin:18px 0 4px}
 .content p,.content li{font-size:15.5px}
 .callout{border:1px solid var(--ok-bd);background:var(--ok-bg);border-radius:12px;padding:16px 18px;margin:22px 0}
 .callout h2{margin:0 0 10px;font-size:17px}
@@ -44,40 +42,120 @@ ol.phases>li{position:relative;padding:13px 0 13px 50px;border-bottom:1px solid 
 ol.phases>li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:12px;width:32px;height:32px;border-radius:50%;background:linear-gradient(120deg,var(--accent1),var(--accent2));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
 ol.phases>li .t{font-weight:600;font-size:15.5px}
 ol.phases>li .d{color:var(--text-soft);font-size:14.5px;margin-top:2px}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:34px;padding-top:18px;border-top:1px solid var(--border);font-size:14px}
 footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;text-align:center;color:var(--text-soft);font-size:13px}
-@media (max-width:760px){.layout{flex-direction:column;padding-top:16px}.sidebar{position:static;flex:none;width:100%}.sidebar a{display:inline-block}}
-</style>
-</head>
-<body>
+@media (max-width:820px){.layout{flex-direction:column;padding-top:14px}.sidebar{position:static;flex:none;width:100%;max-height:none}}
+</style></head><body>
 <header class="site"><div class="bar"><a class="brand" href="../index.html">Hacks.Guide</a><nav><a href="../index.html">Home</a><a href="../donations.html">Donations</a></nav></div></header>
 <div class="shell"><div class="layout">
 <aside class="sidebar"><div class="back"><a href="../index.html">&larr; All guides</a></div>
-<p class="kick">PlayStation 1</p>
+<p class="kick">PlayStation 1 Guide</p>
+<p class="sec">Getting Started</p>
 <a href="index.html" class="active">Overview</a>
-<a href="compatibility.html">Compatibility</a>
-<a href="requirements.html">What you&#x27;ll need</a>
-<a href="methods.html">Methods</a>
-<a href="installation.html">Installation</a>
-<a href="homebrew.html">Homebrew &amp; apps</a>
-<a href="troubleshooting.html">Troubleshooting</a>
+<a href="what-you-can-do.html">What you can do</a>
+<a href="is-compatible.html">Is my PS1 compatible?</a>
+<a href="glossary.html">Glossary</a>
+<a href="before-you-begin.html">Before you begin</a>
+<a href="choosing-a-method.html">Choosing your method</a>
+<a href="safety-and-risks.html">Safety &amp; risks</a>
+<a href="backing-up-saves.html">Memory cards &amp; saves</a>
+<p class="sec">Models &amp; Hardware</p>
+<a href="model-identification.html">Identifying your model</a>
+<a href="board-revisions.html">Board revisions</a>
+<a href="early-fat-models.html">Early fat models</a>
+<a href="later-fat-models.html">Later fat models</a>
+<a href="psone-slim.html">The PSone slim</a>
+<a href="motherboard-map.html">Motherboard map</a>
+<a href="controllers.html">Controllers</a>
+<a href="memory-cards.html">Memory cards</a>
+<a href="regional-overview.html">Regional overview</a>
+<a href="serial-and-datecode.html">Serials &amp; date codes</a>
+<p class="sec">Methods</p>
+<a href="methods-overview.html">Methods overview</a>
+<a href="psnee.html">PSNee modchip</a>
+<a href="mm3-onechip-mayumi.html">MM3 / OneChip / Mayumi</a>
+<a href="xstation.html">xStation ODE</a>
+<a href="terraonion-mode.html">Terraonion MODE</a>
+<a href="swap-trick.html">The swap trick</a>
+<a href="modchip-vs-ode.html">Modchip vs ODE</a>
+<a href="methods-comparison.html">Methods compared</a>
+<p class="sec">Installation</p>
+<a href="soldering-basics.html">Soldering basics</a>
+<a href="installing-psnee.html">Installing a PSNee</a>
+<a href="installing-a-modchip.html">Installing a modchip</a>
+<a href="installing-xstation.html">Installing the xStation</a>
+<a href="installing-mode.html">Installing the MODE</a>
+<a href="pal-bios-wiring.html">PAL BIOS connections</a>
+<a href="post-install-testing.html">Testing before reassembly</a>
+<a href="first-boot.html">First boot</a>
+<p class="sec">ODE &amp; Media</p>
+<a href="xstation-setup.html">xStation setup</a>
+<a href="mode-setup.html">MODE setup</a>
+<a href="sd-card-preparation.html">SD card preparation</a>
+<a href="ode-firmware-updates.html">ODE firmware updates</a>
+<a href="burning-discs.html">Burning backups to CD-R</a>
+<a href="cd-r-media.html">Choosing CD-R media</a>
+<a href="toc-patching.html">TOC patching</a>
+<a href="image-formats.html">Disc image formats</a>
+<a href="multi-disc-games.html">Multi-disc games</a>
+<p class="sec">Homebrew</p>
+<a href="ps1-homebrew.html">PS1 homebrew</a>
+<a href="running-homebrew.html">Running homebrew</a>
+<a href="homebrew-tools.html">Development tools</a>
+<a href="demos-and-scene.html">Demoscene</a>
+<a href="net-yaroze.html">Net Yaroze</a>
+<a href="emulation-note.html">Emulation on PS1</a>
+<p class="sec">Video &amp; AV</p>
+<a href="av-overview.html">AV output options</a>
+<a href="rgb-scart.html">RGB SCART</a>
+<a href="composite-and-svideo.html">Composite &amp; S-Video</a>
+<a href="csync-and-sync.html">Sync / csync</a>
+<a href="digital-video.html">Digital video / HDMI</a>
+<a href="av-troubleshooting.html">AV troubleshooting</a>
+<p class="sec">Region &amp; Import</p>
+<a href="region-overview.html">Region overview</a>
+<a href="region-free.html">Region-free play</a>
+<a href="playing-imports.html">Playing imports</a>
+<a href="ntsc-pal-differences.html">NTSC vs PAL</a>
+<p class="sec">Maintenance &amp; Repair</p>
+<a href="disc-drive-overview.html">The KSM-440 drive</a>
+<a href="laser-replacement.html">Replacing the laser</a>
+<a href="lens-cleaning.html">Cleaning the lens</a>
+<a href="spindle-gear.html">Spindle &amp; gear wear</a>
+<a href="lid-sensor-switch.html">Lid sensor switch</a>
+<a href="controller-repair.html">Controller repair</a>
+<a href="power-supply.html">Power supply</a>
+<a href="psone-lcd-screen.html">PSone LCD screen</a>
+<a href="the-tilt-trick.html">The tilt trick</a>
+<a href="recapping.html">Recapping</a>
+<p class="sec">Troubleshooting</p>
+<a href="ts-wont-read-discs.html">Won&#x27;t read discs</a>
+<a href="ts-modchip-no-boot.html">Modchip won&#x27;t boot games</a>
+<a href="ts-disc-read-error.html">Disc read errors</a>
+<a href="ts-ode-not-detected.html">ODE not detected</a>
+<a href="ts-region-error.html">Region error</a>
+<a href="ts-no-video.html">No video</a>
+<a href="ts-audio-issues.html">Audio problems</a>
+<a href="ts-freezing.html">Games freeze</a>
+<a href="ts-wobbly-disc.html">Wobbly disc</a>
+<a href="ts-controller-not-detected.html">Controller not detected</a>
+<a href="error-messages.html">Error messages</a>
+<p class="sec">Reference</p>
 <a href="faq.html">FAQ</a>
-<a href="credits.html">Credits</a></aside>
-<main class="content">
-<span class="badge">PlayStation 1</span>
-<h1>PlayStation 1 Hacks Guide</h1>
-<h2>PlayStation 1 Modding Overview</h2>
-<p>The original Sony PlayStation (PS1, also called PSX) shipped in 1994 and remained on shelves for years across several hardware revisions. Out of the box every retail unit refuses to boot discs that fail its copy-protection and region checks. Modding the console removes those restrictions, and this guide walks through the legitimate, hobbyist reasons you might want to do that and the realistic ways to get there.</p>
-<p>There are four things people typically modify a PS1 to do:</p>
-<ul>
-<li><strong>Playing backups</strong> of games you own, so the original discs can stay safe instead of spinning in a 30-year-old laser assembly.</li>
-<li><strong>Running imports</strong> from other regions, which is otherwise blocked by region locking — and on PAL machines by an additional BIOS-level check.</li>
-<li><strong>Homebrew and emulation</strong>, the community-made games, demos, and utility software that boot from the same media as backups.</li>
-<li><strong>Disc preservation</strong>, dumping aging titles to digital images before the physical media degrades.</li>
-</ul>
-<p>An important reality check before you begin: there is no software-only solution on PS1. Unlike later consoles, you cannot simply run an exploit from a memory card to load backups. Every practical method requires hardware — either a <strong>modchip</strong> soldered to the motherboard (such as the open-source PSNee, or older commercial chips like MM3, OneChip, and Mayumi), or an <strong>optical drive emulator (ODE)</strong> like xStation or the Terraonion MODE that replaces the disc drive entirely and loads images from an SD card. The only no-hardware option is the swap trick, and it works on just the earliest fat consoles while wearing out the drive.</p>
-<p>This guide is aimed at hobbyists comfortable with handling vintage electronics, who own the games they intend to back up, and who want a clear picture of the trade-offs before opening the case. The following pages help you identify your board revision, pick a method that suits it, and understand the process at a high level.</p>
-</main>
-</div></div>
+<a href="tools-list.html">Tools &amp; software</a>
+<a href="compatibility-notes.html">Compatibility notes</a>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>PlayStation 1 Hacks Guide</h1>
+<h2>Original PlayStation Modding: Overview</h2>
+<p>The original PlayStation (PS1) shipped in 1994 and remains one of the most beloved consoles ever made. Decades later, an active hobbyist community keeps these machines running through <strong>modding</strong>: small hardware and software changes that unlock new, legitimate uses for hardware you already own.</p>
+<p>This guide focuses on three legal goals. First, running <strong>homebrew</strong>: original software, demos, and tools written by enthusiasts for the platform. Second, playing <strong>imports</strong>: games you legitimately own that were released in another region. Third, <strong>disc preservation</strong>: protecting fragile, aging discs from a library you own by working from backups or images instead of risking the originals.</p>
+<p>Because the PS1 reads from physical CDs and enforces region locking at the hardware level, none of these goals are possible on a stock console. Enabling them requires a hardware change: a <strong>modchip</strong> or an <strong>optical drive emulator (ODE)</strong> that loads disc images from an SD card. We explain both paths plainly.</p>
+<div class="callout">
+<h2>How this guide is organized</h2>
+<p>This is a high-level overview. The guide has many sub-pages covering compatibility, terminology, choosing a method, safety, and save management. Read them in order if you are new, or jump to the topic you need.</p>
+</div>
+<p>We assume you own the hardware and the games involved. This guide does not cover piracy, and we encourage you to support the developers and preservation projects that keep this platform alive. <span class="tag">overview</span></p>
+<div class="pager"><span></span><a href="what-you-can-do.html">What you can do &rarr;</a></div>
+</main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
-</body>
-</html>
+</body></html>

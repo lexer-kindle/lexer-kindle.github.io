@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Credits &amp; sources — PlayStation 1 Hacks Guide</title>
-<meta name="description" content="PlayStation 1 Hacks Guide — Credits &amp; sources.">
+<title>Disc image formats — PlayStation 1 Hacks Guide</title>
+<meta name="description" content="PlayStation 1 Hacks Guide — Disc image formats.">
 <link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
@@ -96,7 +96,7 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="burning-discs.html">Burning backups to CD-R</a>
 <a href="cd-r-media.html">Choosing CD-R media</a>
 <a href="toc-patching.html">TOC patching</a>
-<a href="image-formats.html">Disc image formats</a>
+<a href="image-formats.html" class="active">Disc image formats</a>
 <a href="multi-disc-games.html">Multi-disc games</a>
 <p class="sec">Homebrew</p>
 <a href="ps1-homebrew.html">PS1 homebrew</a>
@@ -144,25 +144,38 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="faq.html">FAQ</a>
 <a href="tools-list.html">Tools &amp; software</a>
 <a href="compatibility-notes.html">Compatibility notes</a>
-<a href="credits.html" class="active">Credits &amp; sources</a></aside>
-<main class="content"><span class="badge">PlayStation 1</span><h1>Credits &amp; sources</h1>
-<h2>Credits and Sources</h2>
-<p>This PlayStation reference section was written as original content for Hacks.Guide. The explanations, matrices, and answers here were composed in our own words to be accurate and accessible, rather than copied from any single source.</p>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>Disc image formats</h1>
+<h2>Disc Image Formats (.bin/.cue) Explained</h2>
+<p>When you dump a game you own, the result is a disc image: a file-based copy of the original CD. The most common format for PlayStation preservation is the <strong>.bin/.cue</strong> pair. Understanding what each file does helps you keep your images organized and avoid the most frequent loading problems.</p>
 
-<h3>Inspired by the community</h3>
-<p>Modding the original PlayStation is possible because of decades of collective documentation, reverse engineering, and tutorial writing by hobbyists. Our understanding draws on the broad body of community knowledge that has accumulated around modchips, optical drive emulators, and homebrew development. Where we describe a tool such as PSNee, xStation, the Terraonion MODE, or PSn00bSDK, the credit for that work belongs entirely to its original authors and maintainers.</p>
+<h3>The Two Files</h3>
+<table class="methods">
+<tr><th>File</th><th>Holds</th></tr>
+<tr><td>.bin</td><td>The raw disc data, sector by sector</td></tr>
+<tr><td>.cue</td><td>A small text sheet describing the track layout</td></tr>
+</table>
 
-<h3>Attribution</h3>
-<p>General reference material was informed by widely available community documentation, including resources maintained by ConsoleMods and other long-standing wikis, forums, and project pages. We are grateful to the maintainers and contributors of those projects for keeping accurate information freely available. Full source attribution is recorded in the accompanying Credits.txt file that ships with this section.</p>
+<p>The <em>.bin</em> is the bulk of the disc, a faithful binary dump. The <em>.cue</em> is a short companion file that tells software where each track begins, how many tracks exist, and which are data versus CD audio.</p>
+
+<h3>Why Both Matter</h3>
+<p>The .cue gives meaning to the .bin. Without it, a tool sees one undifferentiated blob and cannot tell game data from music. This is why ODEs and burners ask you to point at the .cue rather than the .bin directly.</p>
 
 <div class="callout">
-<h2>A note on accuracy</h2>
-<p>Hardware revisions, firmware, and tool compatibility change over time. If you spot an error or an out-of-date detail, please report it so the reference can be corrected. Community feedback is how guides like this stay reliable.</p>
+<h2>Keep Them Together</h2>
+<p>A .cue references its .bin by filename. Keep the pair in the same folder and avoid renaming one without the other.</p>
 </div>
 
-<h3>Using this content</h3>
-<p>This material is provided to help enthusiasts preserve and enjoy hardware they own. Always respect copyright law: modding is for backups of software you legally possess and for running original homebrew, not for piracy.</p>
-<div class="pager"><a href="compatibility-notes.html">&larr; Compatibility notes</a><span></span></div>
+<ul>
+<li>Some games split into multiple .bin tracks, each listed in the .cue.</li>
+<li>CD audio tracks appear in the .cue as separate entries.</li>
+<li>If a game won't load, open the .cue in a text editor and check the filenames match.</li>
+</ul>
+
+<div class="warn">
+<p>Renaming a .bin without updating the .cue breaks the link and stops the image from mounting.</p>
+</div>
+<div class="pager"><a href="toc-patching.html">&larr; TOC patching</a><a href="multi-disc-games.html">Multi-disc games &rarr;</a></div>
 </main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
 </body></html>

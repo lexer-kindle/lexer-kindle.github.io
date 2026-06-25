@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Credits &amp; sources — PlayStation 1 Hacks Guide</title>
-<meta name="description" content="PlayStation 1 Hacks Guide — Credits &amp; sources.">
+<title>Burning backups to CD-R — PlayStation 1 Hacks Guide</title>
+<meta name="description" content="PlayStation 1 Hacks Guide — Burning backups to CD-R.">
 <link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
@@ -93,7 +93,7 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="mode-setup.html">MODE setup</a>
 <a href="sd-card-preparation.html">SD card preparation</a>
 <a href="ode-firmware-updates.html">ODE firmware updates</a>
-<a href="burning-discs.html">Burning backups to CD-R</a>
+<a href="burning-discs.html" class="active">Burning backups to CD-R</a>
 <a href="cd-r-media.html">Choosing CD-R media</a>
 <a href="toc-patching.html">TOC patching</a>
 <a href="image-formats.html">Disc image formats</a>
@@ -144,25 +144,38 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="faq.html">FAQ</a>
 <a href="tools-list.html">Tools &amp; software</a>
 <a href="compatibility-notes.html">Compatibility notes</a>
-<a href="credits.html" class="active">Credits &amp; sources</a></aside>
-<main class="content"><span class="badge">PlayStation 1</span><h1>Credits &amp; sources</h1>
-<h2>Credits and Sources</h2>
-<p>This PlayStation reference section was written as original content for Hacks.Guide. The explanations, matrices, and answers here were composed in our own words to be accurate and accessible, rather than copied from any single source.</p>
-
-<h3>Inspired by the community</h3>
-<p>Modding the original PlayStation is possible because of decades of collective documentation, reverse engineering, and tutorial writing by hobbyists. Our understanding draws on the broad body of community knowledge that has accumulated around modchips, optical drive emulators, and homebrew development. Where we describe a tool such as PSNee, xStation, the Terraonion MODE, or PSn00bSDK, the credit for that work belongs entirely to its original authors and maintainers.</p>
-
-<h3>Attribution</h3>
-<p>General reference material was informed by widely available community documentation, including resources maintained by ConsoleMods and other long-standing wikis, forums, and project pages. We are grateful to the maintainers and contributors of those projects for keeping accurate information freely available. Full source attribution is recorded in the accompanying Credits.txt file that ships with this section.</p>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>Burning backups to CD-R</h1>
+<h2>Burning Your Own Game Backups to CD-R</h2>
+<p>If you use a modchip rather than an optical drive emulator, you play your games as physical discs burned to CD-R. This means turning a disc image you dumped from your own game into a working recordable disc the console can read.</p>
 
 <div class="callout">
-<h2>A note on accuracy</h2>
-<p>Hardware revisions, firmware, and tool compatibility change over time. If you spot an error or an out-of-date detail, please report it so the reference can be corrected. Community feedback is how guides like this stay reliable.</p>
+<h2>Own the Original</h2>
+<p>Only burn backups of discs you legally own, made from your own dumps. The original stays on your shelf as your archive copy.</p>
 </div>
 
-<h3>Using this content</h3>
-<p>This material is provided to help enthusiasts preserve and enjoy hardware they own. Always respect copyright law: modding is for backups of software you legally possess and for running original homebrew, not for piracy.</p>
-<div class="pager"><a href="compatibility-notes.html">&larr; Compatibility notes</a><span></span></div>
+<h3>What You Need</h3>
+<ul>
+<li>A <em>.bin/.cue</em> image of your own game.</li>
+<li>Quality blank CD-R media (covered on its own page).</li>
+<li>Burning software that understands cue sheets and can write all tracks, including CD audio.</li>
+</ul>
+
+<h3>Burning Steps</h3>
+<ol class="phases">
+<li><span class="tag">Load</span> Open the <em>.cue</em> sheet so every track is recognized.</li>
+<li><span class="tag">Speed</span> Burn at a low, conservative speed for accuracy.</li>
+<li><span class="tag">Write</span> Burn the full image in one session.</li>
+<li><span class="tag">Verify</span> Compare the burned disc against the image if your software allows.</li>
+</ol>
+
+<div class="warn">
+<p>Always load the .cue, not just the .bin. The cue sheet defines track boundaries and CD-DA audio; burning the .bin alone can drop music tracks or produce an unreadable disc.</p>
+</div>
+
+<h3>If a Backup Won't Boot</h3>
+<p>Some games expect a specific table of contents. If a correctly burned disc still refuses to load, it may need TOC patching, explained on the TOC page.</p>
+<div class="pager"><a href="ode-firmware-updates.html">&larr; ODE firmware updates</a><a href="cd-r-media.html">Choosing CD-R media &rarr;</a></div>
 </main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
 </body></html>

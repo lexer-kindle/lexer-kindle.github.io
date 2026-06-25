@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Credits &amp; sources — PlayStation 1 Hacks Guide</title>
-<meta name="description" content="PlayStation 1 Hacks Guide — Credits &amp; sources.">
+<title>SD card preparation — PlayStation 1 Hacks Guide</title>
+<meta name="description" content="PlayStation 1 Hacks Guide — SD card preparation.">
 <link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
@@ -91,7 +91,7 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <p class="sec">ODE &amp; Media</p>
 <a href="xstation-setup.html">xStation setup</a>
 <a href="mode-setup.html">MODE setup</a>
-<a href="sd-card-preparation.html">SD card preparation</a>
+<a href="sd-card-preparation.html" class="active">SD card preparation</a>
 <a href="ode-firmware-updates.html">ODE firmware updates</a>
 <a href="burning-discs.html">Burning backups to CD-R</a>
 <a href="cd-r-media.html">Choosing CD-R media</a>
@@ -144,25 +144,35 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="faq.html">FAQ</a>
 <a href="tools-list.html">Tools &amp; software</a>
 <a href="compatibility-notes.html">Compatibility notes</a>
-<a href="credits.html" class="active">Credits &amp; sources</a></aside>
-<main class="content"><span class="badge">PlayStation 1</span><h1>Credits &amp; sources</h1>
-<h2>Credits and Sources</h2>
-<p>This PlayStation reference section was written as original content for Hacks.Guide. The explanations, matrices, and answers here were composed in our own words to be accurate and accessible, rather than copied from any single source.</p>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>SD card preparation</h1>
+<h2>Preparing the SD Card &amp; Folder Structure</h2>
+<p>A well-prepared SD card is the foundation of a reliable ODE setup. How you format the card and arrange your disc images determines whether your games appear cleanly in the menu and load without hiccups.</p>
 
-<h3>Inspired by the community</h3>
-<p>Modding the original PlayStation is possible because of decades of collective documentation, reverse engineering, and tutorial writing by hobbyists. Our understanding draws on the broad body of community knowledge that has accumulated around modchips, optical drive emulators, and homebrew development. Where we describe a tool such as PSNee, xStation, the Terraonion MODE, or PSn00bSDK, the credit for that work belongs entirely to its original authors and maintainers.</p>
+<h3>Formatting</h3>
+<p>For most cards, format as <strong>exFAT</strong>. exFAT handles large files and big cards without the size limits of older filesystems. FAT32 remains an option on smaller cards but caps individual files at 4 GB, which is rarely an issue for single-disc PlayStation images but can matter for large multi-track dumps.</p>
 
-<h3>Attribution</h3>
-<p>General reference material was informed by widely available community documentation, including resources maintained by ConsoleMods and other long-standing wikis, forums, and project pages. We are grateful to the maintainers and contributors of those projects for keeping accurate information freely available. Full source attribution is recorded in the accompanying Credits.txt file that ships with this section.</p>
+<table class="methods">
+<tr><th>Filesystem</th><th>Best For</th><th>Notes</th></tr>
+<tr><td>exFAT</td><td>Large cards</td><td>No practical file-size limit</td></tr>
+<tr><td>FAT32</td><td>Smaller cards</td><td>4 GB per-file ceiling</td></tr>
+</table>
 
-<div class="callout">
-<h2>A note on accuracy</h2>
-<p>Hardware revisions, firmware, and tool compatibility change over time. If you spot an error or an out-of-date detail, please report it so the reference can be corrected. Community feedback is how guides like this stay reliable.</p>
+<h3>Folder Structure</h3>
+<p>Give each game its own folder named after the title. Inside, keep the <em>.cue</em> file alongside the <em>.bin</em> data and any extra audio tracks it references. Keeping the pair together prevents the menu from listing orphaned files.</p>
+
+<ol>
+<li>One folder per game, clearly named.</li>
+<li>The .cue and its .bin(s) live in the same folder.</li>
+<li>Multi-disc games may group their discs under one parent folder.</li>
+</ol>
+
+<div class="warn">
+<p>Avoid unusual characters in folder names. Plain letters, numbers, hyphens, and spaces are safest for menu display.</p>
 </div>
 
-<h3>Using this content</h3>
-<p>This material is provided to help enthusiasts preserve and enjoy hardware they own. Always respect copyright law: modding is for backups of software you legally possess and for running original homebrew, not for piracy.</p>
-<div class="pager"><a href="compatibility-notes.html">&larr; Compatibility notes</a><span></span></div>
+<p>After copying files, safely eject the card from your computer before inserting it into the console, so all writes finish flushing.</p>
+<div class="pager"><a href="mode-setup.html">&larr; MODE setup</a><a href="ode-firmware-updates.html">ODE firmware updates &rarr;</a></div>
 </main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
 </body></html>

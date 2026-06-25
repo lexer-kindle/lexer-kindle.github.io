@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Credits &amp; sources — PlayStation 1 Hacks Guide</title>
-<meta name="description" content="PlayStation 1 Hacks Guide — Credits &amp; sources.">
+<title>Installing the MODE — PlayStation 1 Hacks Guide</title>
+<meta name="description" content="PlayStation 1 Hacks Guide — Installing the MODE.">
 <link rel="icon" href="../images/favicon.ico"><style>
 :root{--bg:#fff;--bg-soft:#f6f6f7;--bg-card:#fff;--border:#e2e2e3;--text:#213547;--text-soft:#5c6b77;--brand:#3451b2;--accent1:#0a2a72;--accent2:#1565d8;--warn-bg:#fff6e6;--warn-bd:#e0a93c;--warn-tx:#7a5500;--ok-bg:#eef4ff;--ok-bd:#3a5ccc}
 @media (prefers-color-scheme:dark){:root{--bg:#1b1b1f;--bg-soft:#202127;--bg-card:#202127;--border:#2e2e32;--text:#dfdfd6;--text-soft:#98989f;--brand:#a8b1ff;--warn-bg:#2a2310;--warn-bd:#9a7b2e;--warn-tx:#e8c66a;--ok-bg:#16202e;--ok-bd:#3a5ccc}}
@@ -84,7 +84,7 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="installing-psnee.html">Installing a PSNee</a>
 <a href="installing-a-modchip.html">Installing a modchip</a>
 <a href="installing-xstation.html">Installing the xStation</a>
-<a href="installing-mode.html">Installing the MODE</a>
+<a href="installing-mode.html" class="active">Installing the MODE</a>
 <a href="pal-bios-wiring.html">PAL BIOS connections</a>
 <a href="post-install-testing.html">Testing before reassembly</a>
 <a href="first-boot.html">First boot</a>
@@ -144,25 +144,42 @@ footer.site{border-top:1px solid var(--border);margin-top:30px;padding:22px 0;te
 <a href="faq.html">FAQ</a>
 <a href="tools-list.html">Tools &amp; software</a>
 <a href="compatibility-notes.html">Compatibility notes</a>
-<a href="credits.html" class="active">Credits &amp; sources</a></aside>
-<main class="content"><span class="badge">PlayStation 1</span><h1>Credits &amp; sources</h1>
-<h2>Credits and Sources</h2>
-<p>This PlayStation reference section was written as original content for Hacks.Guide. The explanations, matrices, and answers here were composed in our own words to be accurate and accessible, rather than copied from any single source.</p>
-
-<h3>Inspired by the community</h3>
-<p>Modding the original PlayStation is possible because of decades of collective documentation, reverse engineering, and tutorial writing by hobbyists. Our understanding draws on the broad body of community knowledge that has accumulated around modchips, optical drive emulators, and homebrew development. Where we describe a tool such as PSNee, xStation, the Terraonion MODE, or PSn00bSDK, the credit for that work belongs entirely to its original authors and maintainers.</p>
-
-<h3>Attribution</h3>
-<p>General reference material was informed by widely available community documentation, including resources maintained by ConsoleMods and other long-standing wikis, forums, and project pages. We are grateful to the maintainers and contributors of those projects for keeping accurate information freely available. Full source attribution is recorded in the accompanying Credits.txt file that ships with this section.</p>
-
-<div class="callout">
-<h2>A note on accuracy</h2>
-<p>Hardware revisions, firmware, and tool compatibility change over time. If you spot an error or an out-of-date detail, please report it so the reference can be corrected. Community feedback is how guides like this stay reliable.</p>
+<a href="credits.html">Credits &amp; sources</a></aside>
+<main class="content"><span class="badge">PlayStation 1</span><h1>Installing the MODE</h1>
+<div class="warn">
+  Fitting the MODE requires disconnecting the optical drive and making soldered connections to the mainboard. Static discharge, heat, or a wrong connection can brick the console. Ground yourself and follow the revision-specific instructions precisely — bricking is a genuine possibility.
 </div>
 
-<h3>Using this content</h3>
-<p>This material is provided to help enthusiasts preserve and enjoy hardware they own. Always respect copyright law: modding is for backups of software you legally possess and for running original homebrew, not for piracy.</p>
-<div class="pager"><a href="compatibility-notes.html">&larr; Compatibility notes</a><span></span></div>
+<p>The Terraonion MODE is an optical drive emulator (ODE) that loads games from internal storage or an SD card in place of the physical disc drive. Like other ODEs, it substitutes for the entire optical unit rather than spoofing an authentication signal, so installation revolves around removing the original drive's role and wiring the MODE board in.</p>
+
+<h2>Match the guide to your board</h2>
+<p>The MODE covers multiple PlayStation revisions, and the exact connections differ between them. Always follow Terraonion's install guide for your specific board revision, and confirm that revision before doing any soldering.</p>
+
+<ol class="phases">
+  <li>
+    <div class="t">Identify</div>
+    <div class="d">Disassemble the console, read the board revision, and open the MODE guide that matches it.</div>
+  </li>
+  <li>
+    <div class="t">Prepare</div>
+    <div class="d">Gather the MODE board and its cabling, prepare storage with firmware and game images, and ready your soldering tools.</div>
+  </li>
+  <li>
+    <div class="t">Disconnect &amp; connect</div>
+    <div class="d">Disconnect the optical drive and attach the MODE to the connection points specified for your revision, keeping wiring tidy.</div>
+  </li>
+  <li>
+    <div class="t">Reassemble</div>
+    <div class="d">Secure the board and any front-panel display, check for shorts, and loosely close the console for testing.</div>
+  </li>
+  <li>
+    <div class="t">Test</div>
+    <div class="d">Power on, confirm the MODE menu loads and a game starts, then complete reassembly.</div>
+  </li>
+</ol>
+
+<p><span class="tag">ODE</span> <span class="tag">Terraonion</span> Take time routing cables so nothing is pinched when the case closes.</p>
+<div class="pager"><a href="installing-xstation.html">&larr; Installing the xStation</a><a href="pal-bios-wiring.html">PAL BIOS connections &rarr;</a></div>
 </main></div></div>
 <footer class="site"><div class="shell"><a href="../index.html">&larr; Back to Hacks.Guide</a> &nbsp;&middot;&nbsp; Sources &amp; attribution in Credits.txt &nbsp;&middot;&nbsp; Copyright &copy; 2024 Nintendo Homebrew + Compiled and polished by Lexer Kindle</div></footer>
 </body></html>
